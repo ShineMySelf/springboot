@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  mapper-locations: classpath:/mapper/*Mapeer.xml
+
+logging:
+  file: logs/app.log
+spring:
+  profiles:
+    active: dev
